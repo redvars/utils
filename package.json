@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "nodemailer": "^6.9.13"
+    "nodemailer": "^7.0.11"
   },
   "version": "2.0.0"
 }
