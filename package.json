@@ -1,5 +1,5 @@
 {
-  "name": "@justaos/utils",
+  "name": "@redvars/utils",
   "scripts": {
     "test": "deno task test",
     "coverage": "deno task coverage",
@@ -9,8 +9,7 @@
     "access": "public"
   },
   "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "nodemailer": "^6.9.13"
+    "@types/node": "^25.0.9"
   },
   "version": "2.0.0"
 }

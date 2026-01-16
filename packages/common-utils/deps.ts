@@ -1,4 +1,4 @@
-import bcrypt from "npm:bcryptjs@2.4.3";
+import bcrypt from "npm:bcryptjs";
 import * as uuid from "@std/uuid";
 
 export { bcrypt, uuid };

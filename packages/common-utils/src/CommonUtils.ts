@@ -1,4 +1,6 @@
-import { bcrypt, uuid } from "../deps.ts";
+import { timingSafeEqual } from "@std/crypto";
+import { randomBytes, scryptSync } from "node:crypto";
+import { Buffer } from "node:buffer";
 
 /**
  * This module contains commonly used utility functions
@@ -13,7 +15,6 @@ import { bcrypt, uuid } from "../deps.ts";
  * ```
  * */
 export default class CommonUtils {
-
   static hasDuplicates(a: string[]): boolean {
     for (let i = 0; i <= a.length; i++) {
       for (let j = i; j <= a.length; j++) {
@@ -61,19 +62,18 @@ export default class CommonUtils {
     return roots;
   }
 
-  static generateUUID(): string {
-    return crypto.randomUUID();
-  }
-
-  static validateUUID(id: string): boolean {
-    return uuid.validate(id);
-  }
-
   static generateHash(data: string): string {
-    return bcrypt.hashSync(data, bcrypt.genSaltSync(8));
+    // Any random string here (ideally should be at least 16 bytes)
+    const salt = randomBytes(16).toString("hex");
+    return `${salt}:${scryptSync(data, salt, 32).toString("hex")}`;
   }
 
   static validateHash(data: string, dataHash: string): boolean {
-    return bcrypt.compareSync(data, dataHash);
+    const [salt, hash] = dataHash.split(":");
+    const hashedData = scryptSync(data, salt, 32).toString("hex");
+    return timingSafeEqual(
+      Buffer.from(hash, "hex"),
+      Buffer.from(hashedData, "hex"),
+    );
   }
 }

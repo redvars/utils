@@ -2,7 +2,7 @@ import { assertEquals, describe, it } from "../../../test_deps.ts";
 
 import { LoggerUtils } from "../mod.ts";
 import * as fmt from "@std/fmt/colors";
-import { FileUtils } from "../../../mod.ts";
+import { exists, remove } from "@utility/file";
 
 describe({
   name: "LoggerUtils",
@@ -22,8 +22,8 @@ describe({
           b: 101
         })
       );
-      assertEquals(FileUtils.existsSync("./my-file-handler.txt"), true);
-      FileUtils.removeSync("./my-file-handler.txt");
+      assertEquals(await exists("./my-file-handler.txt"), true);
+      await remove("./my-file-handler.txt");
     });
   }
 });
