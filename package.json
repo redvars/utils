@@ -16,5 +16,5 @@
     "node-email-reply-parser": "^0.1.4",
     "nodemailer": "^7.0.12"
   },
-  "version": "2.0.1"
+  "version": "2.0.2"
 }
