@@ -8,9 +8,9 @@ export function parseReply(mailText: string): string {
   return replyParser(mailText, true);
 }
 
-export function parseMail(buffer: string): Promise<any> {
+/*export function parseMail(buffer: string): Promise<any> {
   return mailparser.simpleParser(buffer);
-}
+}*/
 
 export default class EmailReceiveHandler {
   #imap: any;
