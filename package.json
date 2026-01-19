@@ -12,6 +12,7 @@
     "@types/imap": "^0.8.43",
     "@types/node": "^25.0.9",
     "@types/nodemailer": "^7.0.5",
+    "bcryptjs": "^3.0.3",
     "imap": "^0.8.19",
     "node-email-reply-parser": "^0.1.4",
     "nodemailer": "^7.0.12"

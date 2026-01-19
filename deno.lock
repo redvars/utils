@@ -21,6 +21,7 @@
     "npm:@types/imap@~0.8.43": "0.8.43",
     "npm:@types/node@^25.0.9": "25.0.9",
     "npm:@types/nodemailer@^7.0.5": "7.0.5",
+    "npm:bcryptjs@^3.0.3": "3.0.3",
     "npm:imap@0.8.19": "0.8.19",
     "npm:imap@~0.8.19": "0.8.19",
     "npm:mailparser@*": "3.6.7",
@@ -944,6 +945,10 @@
         "@types/node"
       ]
     },
+    "bcryptjs@3.0.3": {
+      "integrity": "sha512-GlF5wPWnSa/X5LKM1o0wz0suXIINz1iHRLvTS+sLyi7XPbe5ycmYI3DlZqVGZZtDgl4DmasFg7gOB3JYbphV5g==",
+      "bin": true
+    },
     "bowser@2.13.1": {
       "integrity": "sha512-OHawaAbjwx6rqICCKgSG0SAnT05bzd7ppyKLVUITZpANBaaMFBAsaNkto3LoQ31tyFP5kNujE8Cdx85G9VzOkw=="
     },
@@ -1240,6 +1245,7 @@
         "npm:@types/imap@~0.8.43",
         "npm:@types/node@^25.0.9",
         "npm:@types/nodemailer@^7.0.5",
+        "npm:bcryptjs@^3.0.3",
         "npm:imap@~0.8.19",
         "npm:node-email-reply-parser@~0.1.4",
         "npm:nodemailer@^7.0.12"

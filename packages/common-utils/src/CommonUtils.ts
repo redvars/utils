@@ -1,6 +1,4 @@
-import { timingSafeEqual } from "@std/crypto";
-import { randomBytes, scryptSync } from "node:crypto";
-import { Buffer } from "node:buffer";
+import { bcrypt } from "../deps.ts";
 
 /**
  * This module contains commonly used utility functions
@@ -63,17 +61,10 @@ export default class CommonUtils {
   }
 
   static generateHash(data: string): string {
-    // Any random string here (ideally should be at least 16 bytes)
-    const salt = randomBytes(16).toString("hex");
-    return `${salt}:${scryptSync(data, salt, 32).toString("hex")}`;
+    return bcrypt.hashSync(data, bcrypt.genSaltSync(8));
   }
 
   static validateHash(data: string, dataHash: string): boolean {
-    const [salt, hash] = dataHash.split(":");
-    const hashedData = scryptSync(data, salt, 32).toString("hex");
-    return timingSafeEqual(
-      Buffer.from(hash, "hex"),
-      Buffer.from(hashedData, "hex"),
-    );
+    return bcrypt.compareSync(data, dataHash);
   }
 }
