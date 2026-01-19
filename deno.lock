@@ -1236,6 +1236,7 @@
       "jsr:@std/path@~0.218.2",
       "jsr:@std/uuid@~0.218.2",
       "jsr:@utility/file@~0.1.3",
+      "npm:bcryptjs@^3.0.3",
       "npm:imap@~0.8.19",
       "npm:node-email-reply-parser@~0.1.4",
       "npm:nodemailer@^7.0.12"

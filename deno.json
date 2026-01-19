@@ -43,6 +43,7 @@
     "@std/uuid": "jsr:@std/uuid@^0.218.2",
     "@std/crypto": "jsr:@std/crypto@^0.218.2",
     "@utility/file": "jsr:@utility/file@^0.1.3",
+    "bcryptjs": "npm:bcryptjs@^3.0.3",
     "imap": "npm:imap@^0.8.19",
     "node-email-reply-parser": "npm:node-email-reply-parser@^0.1.4",
     "nodemailer": "npm:nodemailer@^7.0.12"
