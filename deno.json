@@ -1,6 +1,6 @@
 {
   "name": "@redvars/utils",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "exports": {
     "./common-utils": "./packages/common-utils/mod.ts",
     "./email-utils": "./packages/email-utils/mod.ts",
